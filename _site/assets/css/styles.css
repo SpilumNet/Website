@@ -7,16 +7,36 @@ body {
 
 a {
   color: #8c8cfa;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.3s; }
+
+a:hover {
+  color: #bfbfbf; }
 
 nav {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #292929;
   display: grid;
   grid-auto-flow: column;
-  text-align: center;
-  font-size: 1.2em; }
+  text-align: center; }
 
-nav a:hover {
-  color: purple; }
+footer {
+  padding: 1em;
+  background-color: #292929;
+  display: grid;
+  grid-auto-flow: column; }
+
+footer h4 {
+  margin-top: 0; }
+
+footer ul {
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+footer .copy {
+  text-align: right;
+  grid-row: 2; }
 
 .current {
   color: #99e699; }
