@@ -15,12 +15,13 @@ a:hover {
   color: white; }
 
 nav {
-  padding-top: 1em;
-  padding-bottom: 1em;
   background-color: #292929;
   display: grid;
   grid-auto-flow: column;
   text-align: center; }
+
+nav a {
+  line-height: 2.5em; }
 
 footer {
   padding: 1em;
