@@ -6,12 +6,13 @@ body {
   font-family: sans-serif; }
 
 a {
-  color: #8c8cfa;
+  color: #a5a5a5;
   text-decoration: none;
-  transition: 0.3s; }
+  transition: 0.3s;
+  background-color: #292929; }
 
 a:hover {
-  color: #bfbfbf; }
+  color: white; }
 
 nav {
   padding-top: 1em;
@@ -39,8 +40,18 @@ footer .copy {
   grid-row: 2; }
 
 .current {
-  color: #99e699; }
+  color: white; }
 
 main {
   padding-left: 2em;
   padding-right: 2em; }
+
+#homeTop {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://papers.co/wallpaper/papers.co-ne80-coding-screen-digital-art-dark-bw-29-wallpaper.jpg"); }
+
+.pageTop {
+  height: 12em;
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: 1em;
+  padding: 10px; }
