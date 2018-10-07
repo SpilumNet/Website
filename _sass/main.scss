@@ -1,6 +1,6 @@
 body {
   background-color: rgb(26, 26, 26);
-  width: 80%;
+  max-width: 65em;
   color: rgb(191, 191, 191);
   margin: auto;
   font-family: sans-serif;;
@@ -48,4 +48,9 @@ footer .copy {
 
 .current {
   color: rgb(153, 230, 153);
+}
+
+main {
+  padding-left: 2em;
+  padding-right: 2em;
 }

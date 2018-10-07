@@ -1,6 +1,6 @@
 body {
   background-color: #1a1a1a;
-  width: 80%;
+  max-width: 65em;
   color: #bfbfbf;
   margin: auto;
   font-family: sans-serif; }
@@ -40,3 +40,7 @@ footer .copy {
 
 .current {
   color: #99e699; }
+
+main {
+  padding-left: 2em;
+  padding-right: 2em; }
