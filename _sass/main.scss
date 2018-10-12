@@ -6,6 +6,24 @@ body {
   font-family: sans-serif;;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #383737;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
 a {
   color: #a5a5a5;
   text-decoration: none;
