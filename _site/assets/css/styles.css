@@ -1,6 +1,6 @@
 body {
   background-color: #1a1a1a;
-  max-width: 65em;
+  max-width: 70em;
   color: #bfbfbf;
   margin: auto;
   font-family: sans-serif; }
@@ -58,7 +58,10 @@ footer .copy {
 
 main {
   padding-left: 2em;
-  padding-right: 2em; }
+  padding-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #2929296e; }
 
 #homeTop {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/topHead.jpg"); }
@@ -67,6 +70,5 @@ main {
   height: 12em;
   margin-left: -2em;
   margin-right: -2em;
-  margin-top: 1em;
   margin-bottom: 1em;
   padding: 10px; }

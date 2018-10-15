@@ -1,6 +1,6 @@
 body {
   background-color: rgb(26, 26, 26);
-  max-width: 65em;
+  max-width: 70em;
   color: rgb(191, 191, 191);
   margin: auto;
   font-family: sans-serif;;
@@ -75,6 +75,9 @@ footer .copy {
 main {
   padding-left: 2em;
   padding-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #2929296e;
 }
 
 #homeTop {
@@ -85,7 +88,6 @@ main {
   height: 12em;
   margin-left: -2em;
   margin-right: -2em;
-  margin-top: 1em;
   margin-bottom: 1em;
   padding: 10px;
 }
