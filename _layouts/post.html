@@ -1,13 +1,18 @@
 ---
 layout: default
+posted: {{ page.date | date_to_string }}
+modified: {{ page.last_modified_at | date_to_string }}
 ---
 <h1>{{ page.title }}</h1>
 
 <p>
-  {{ page.date | date_to_string }}
+  Posted {{ page.date | date_to_string }}<br>
+  {% if page.posted != page.modified %}
+  Modified {{ page.last_modified_at | date_to_string }}
+  {% endif %}
   {% assign author = site.authors | where: 'short_name', page.author | first %}
   {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
+  - <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
 </p>
 
