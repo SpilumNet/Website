@@ -1,11 +1,15 @@
 - name: Home
   link: /
+  icon: e900
 
 - name: About
   link: /about.html
+  icon: e903
 
 - name: Blog
   link: /blog.html
+  icon: e902
 
 - name: Staff
   link: /staff.html
+  icon: e923
