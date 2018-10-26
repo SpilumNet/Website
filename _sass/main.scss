@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(26, 26, 26);
+  background-color: #424242;
   max-width: 70em;
   color: rgb(191, 191, 191);
   margin: auto;
@@ -28,7 +28,7 @@ a {
   color: #a5a5a5;
   text-decoration: none;
   transition: 0.3s;
-  background-color: #292929;
+  background-color: #303030;
 
 }
 
@@ -37,7 +37,7 @@ a:hover {
 }
 
 nav {
-  background-color: #292929;
+  background-color: #353535;
   display: grid;
   grid-auto-flow: column;
   text-align: center;
@@ -49,7 +49,7 @@ nav a {
 
 footer {
   padding: 1em;
-  background-color: #292929;
+  background-color: #353535;
   display: grid;
   grid-auto-flow: column;
 }
@@ -80,7 +80,7 @@ main {
 }
 
 .hometop {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/img/topHead.jpg');
+  background: url('/assets/img/topHead.jpg');
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 1% 1em 8%;
