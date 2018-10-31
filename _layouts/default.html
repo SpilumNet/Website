@@ -3,12 +3,14 @@
 {% include head.html %}
 
 <body>
-  {% include google.html %}
-  {% include navigation.html %}
-  <main>
-    {{ content }}
-  </main>
-  {% include footer.html %}
+  <div class="wrap">
+    {% include google.html %}
+    {% include navigation.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
 </body>
 
 </html>

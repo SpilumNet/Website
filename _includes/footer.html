@@ -2,12 +2,14 @@
   <ul>
     <h4>Other Websites</h4>
     {% for item in site.data.tree %}
-      <li>
-        <a href="{{ item.link }}" target="_blank">
-          {{ item.name }}
-        </a>
+    <li>
+      <a href="{{ item.link }}" target="_blank">
+        {{ item.name }}
+      </a>
     </li>
     {% endfor %}
   </ul>
   <p class="copy">© 2018 <img src="/assets/svg/sp-net.svg" height="12em"></p>
 </footer>
+
+<script src="/assets/js/bgen.js"></script>

@@ -3,21 +3,23 @@
 {% include head.html %}
 
 <body>
-  {% include navigation.html %}
-  {% include hometop.html %}
-      <a href="#">
-  <div class="ad1">
-    <div class="ad1Head">
-      <h2>Want to promote your business?</h2>
-      <h3>Your advertisement could be here!</h3>
-    </div>
-    <h4>Contact us!</h4>
-  </div>
+  <div class="wrap">
+    {% include navigation.html %}
+    {% include hometop.html %}
+    <a href="#">
+      <div class="ad1">
+        <div class="ad1Head">
+          <h2>Want to promote your business?</h2>
+          <h3>Your advertisement could be here!</h3>
+        </div>
+        <h4>Contact us!</h4>
+      </div>
     </a>
-  <main>
-    {{ content }}
-  </main>
-  {% include footer.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
 </body>
 
 </html>
