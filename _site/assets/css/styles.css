@@ -21,8 +21,8 @@ body {
 a {
   color: #a5a5a5;
   text-decoration: none;
-  transition: 0.3s;
-  background-color: #303030; }
+  background-color: #303030;
+  transition: 0.3s; }
 
 a:hover {
   color: white; }
@@ -56,6 +56,35 @@ footer .copy {
 .current {
   color: white; }
 
+.ad1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em 2em;
+  background: #2929296e;
+  background: linear-gradient(-45deg, transparent 25%, #2929296e 25%, #2929296e 50%, transparent 50%, transparent 75%, #2929296e 75%);
+  background-size: 27px 27px;
+  -webkit-animation: barberpole 30s infinite linear;
+  animation: barberpole 30s infinite linear; }
+
+.ad1 h4 {
+  float: right;
+  text-align: center;
+  background: #2929296e;
+  padding: 1em;
+  margin-right: 1em; }
+
+.ad1 h4:hover {
+  background: #292929d4;
+  transition: 0.3s; }
+
+.ad1Head {
+  display: inline-block; }
+
+@-webkit-keyframes barberpole {
+  from {
+    background-position: 0%; }
+  to {
+    background-position: 1000px; } }
 main {
   padding: 0.5em 2em;
   margin-top: 1em;
