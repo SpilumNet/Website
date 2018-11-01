@@ -3,7 +3,8 @@ body {
   max-width: 70em;
   color: #bfbfbf;
   margin: auto;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-attachment: fixed !important; }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
