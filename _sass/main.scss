@@ -83,6 +83,10 @@ footer .copy {
   animation: barberpole 30s infinite linear;
 }
 
+.ad1:hover span {
+  color: #00abe9;
+}
+
 .ad1 h2 {
   float: left;
   margin-bottom: 0;
@@ -94,11 +98,11 @@ footer .copy {
   background: #2929296e;
   padding: 1em;
   margin-right: 1em;
+  transition: background-color 0.3s;
 }
 
 .ad1 h4:hover {
   background: #292929d4;
-  transition: 0.3s;
 }
 
 .ad1Head {
@@ -144,10 +148,11 @@ ul {
 	animation: topToBottom 12s linear infinite 0s;
 	-ms-animation: topToBottom 12s linear infinite 0s;
 	-webkit-animation: topToBottom 12s linear infinite 0s;
-	color: #00abe9;
+	color: #008cbf;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
+  transition: 0.3s
 }
 .slidingVertical span:nth-child(2){
 	animation-delay: 3s;
