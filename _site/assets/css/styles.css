@@ -3,6 +3,7 @@ body {
   max-width: 70em;
   color: #bfbfbf;
   margin: auto;
+  margin-top: 3.5em;
   font-family: sans-serif;
   background-attachment: fixed !important; }
 
@@ -29,13 +30,33 @@ a:hover {
   color: white; }
 
 nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  max-width: 70em;
+  width: 100%; }
+
+.nav-items {
   background-color: #353535;
   display: grid;
   grid-auto-flow: column;
   text-align: center; }
 
-nav a {
+.nav-items a {
   line-height: 3em; }
+
+.mob-nav {
+  display: none;
+  background-color: #353535;
+  font-size: 2em;
+  padding: 0.1em;
+  cursor: pointer; }
+
+.mob-nav span {
+  float: right; }
+
+.mob-togg {
+  display: none; }
 
 footer {
   padding: 1em;
@@ -276,7 +297,27 @@ ul {
     text-indent: 0; }
 
   .slidingVertical h2 {
-    padding-bottom: 1.5em; } }
+    padding-bottom: 1.5em; }
+
+  .mob-nav {
+    display: block;
+    position: relative; }
+
+  .nav-items {
+    grid-auto-flow: row;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2em);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
+
+  .mob-togg:checked ~ .nav-items,
+  .mob-togg:checked ~ .nav-items,
+  .mob-togg:checked ~ .nav-items {
+    display: grid;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s; } }
 @font-face {
   font-family: "Icomoon";
   src: url("../fonts/fonts/icomoon.eot");
