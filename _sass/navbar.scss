@@ -47,7 +47,7 @@ nav {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-2em);
-  transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 .mob-togg:checked ~ .nav-items,
