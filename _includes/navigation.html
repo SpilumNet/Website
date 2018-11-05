@@ -1,10 +1,10 @@
 <nav>
   <input type="checkbox" id="toggle" class="mob-togg">
-  <label for="toggle" class="mob-nav">Spilum.net<span aria-hidden="true" data-icon="&#xe923"></span></label>
+  <label for="toggle" class="mob-nav">Spilum.net<span class="icon-menu"></span></label>
   <div class="nav-items">
   {% for item in site.data.navigation %}
   <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>
-    <span aria-hidden="true" data-icon="&#x{{ item.icon }}"></span> {{ item.name }}
+    <span class="{{ item.icon }}"></span> {{ item.name }}
   </a>
   {% endfor %}
   </div>

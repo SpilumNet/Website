@@ -1,0 +1,36 @@
+$icons: home3, newspaper, pencil, book, profile, menu, circle-right;
+
+@each $icon in $icons {
+  .icon-#{$icon} {
+    font-family: Icomoon;
+    font-weight: normal;
+  }
+}
+
+.icon-home3:before {
+  content: "\e900";
+}
+
+.icon-newspaper:before {
+  content: "\e901";
+}
+
+.icon-pencil:before {
+  content: "\e902";
+}
+
+.icon-book:before {
+  content: "\e903";
+}
+
+.icon-profile:before {
+  content: "\e923";
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+.icon-circle-right:before {
+  content: "\ea42";
+}

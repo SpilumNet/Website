@@ -1,15 +1,15 @@
 - name: Home
   link: /
-  icon: e900
+  icon: icon-home3
 
 - name: About
   link: /about.html
-  icon: e903
+  icon: icon-book
 
 - name: Blog
   link: /blog.html
-  icon: e902
+  icon: icon-pencil
 
 - name: Staff
   link: /staff.html
-  icon: e923
+  icon: icon-profile
