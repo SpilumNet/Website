@@ -31,6 +31,7 @@ nav {
 
 .mob-togg {
   display: none;
+  pointer-event: none;
 }
 
 @media all and (max-width: 750px) {
@@ -44,8 +45,9 @@ nav {
   grid-auto-flow: row;
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(-2em);
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 .mob-togg:checked ~ .nav-items,
@@ -53,6 +55,7 @@ nav {
 .mob-togg:checked ~ .nav-items {
   display: grid;
   visibility: visible;
+  pointer-events: auto;
   opacity: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
