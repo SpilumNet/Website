@@ -64,14 +64,12 @@
   display: none;
 }
 
-.mob-togg:checked ~ .nav-items,
-.mob-togg:checked ~ .nav-items,
 .mob-togg:checked ~ .nav-items {
   display: grid;
   visibility: visible;
   pointer-events: auto;
   opacity: 1;
   transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s;
+  transition-delay: 0s, 0s, $transition;
 }
 }

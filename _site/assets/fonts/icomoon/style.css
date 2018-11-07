@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?o2w3ai');
-  src:  url('fonts/icomoon.eot?o2w3ai#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o2w3ai') format('truetype'),
-    url('fonts/icomoon.woff?o2w3ai') format('woff'),
-    url('fonts/icomoon.svg?o2w3ai#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ug0pwv');
+  src:  url('fonts/icomoon.eot?ug0pwv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ug0pwv') format('truetype'),
+    url('fonts/icomoon.woff?ug0pwv') format('woff'),
+    url('fonts/icomoon.svg?ug0pwv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-discord:before {
+  content: "\e904";
+}
 .icon-home3:before {
   content: "\e900";
 }
@@ -39,11 +42,20 @@
 .icon-profile:before {
   content: "\e923";
 }
+.icon-bubbles4:before {
+  content: "\e970";
+}
 .icon-menu:before {
   content: "\e9bd";
 }
 .icon-circle-right:before {
   content: "\ea42";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-twitch:before {
+  content: "\ea9f";
 }
 .icon-github:before {
   content: "\eab0";

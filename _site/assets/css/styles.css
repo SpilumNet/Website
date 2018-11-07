@@ -50,8 +50,6 @@ nav .mob-togg {
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
   nav .head {
     display: none; }
-  nav .mob-togg:checked ~ .nav-items,
-  nav .mob-togg:checked ~ .nav-items,
   nav .mob-togg:checked ~ .nav-items {
     display: grid;
     visibility: visible;
@@ -59,6 +57,43 @@ nav .mob-togg {
     opacity: 1;
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s; } }
+
+.social-btn {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  z-index: 10;
+  font-size: 2em; }
+
+.social-items {
+  grid-auto-flow: row;
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  bottom: -3em;
+  z-index: 5;
+  position: fixed;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
+
+.social-togg {
+  z-index: 10;
+  display: none; }
+
+.social-btn label:hover {
+  color: #ffffff; }
+
+.social-btn label {
+  cursor: pointer;
+  transition: 0.3s; }
+
+.social-togg:checked ~ .social-items {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  bottom: 2.5em;
+  position: fixed;
+  transition-delay: 0s, 0s, 0.3s; }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
