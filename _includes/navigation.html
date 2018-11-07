@@ -1,11 +1,13 @@
 <nav>
+  <div class="wrap">
   <input type="checkbox" id="toggle" class="mob-togg">
   <label for="toggle" class="mob-nav">Spilum.net<span class="icon-menu"></span></label>
-  <div class="nav-items">
+  <div class="nav-items"><a class="head" href="/">Spilum.net</a>
   {% for item in site.data.navigation %}
   <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>
     <span class="{{ item.icon }}"></span> {{ item.name }}
   </a>
   {% endfor %}
+  </div>
   </div>
 </nav>

@@ -4,14 +4,18 @@ description: Blogging Site
 layout: home
 ---
 
+<div class="postboard">
 <h1><span class="icon-newspaper"></span> News</h1>
 <ul>
   {% for post in site.posts limit: 5 %}
   {% if post.type == "news" %}
+  <a href="{{ post.url }}">
   <li>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2>{{ post.title }}</h2>
     <p>{{ post.description }}</p>
   </li>
+  </a>
   {% endif %}
   {% endfor %}
 </ul>
+</div>

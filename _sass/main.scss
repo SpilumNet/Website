@@ -7,6 +7,11 @@ body {
   background-attachment: fixed !important;
 }
 
+nav {
+  @import "navbar";
+}
+
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -28,8 +33,7 @@ body {
 a {
   color: #a5a5a5;
   text-decoration: none;
-  background-color: #303030;
-  transition: 0.3s;
+  transition: $transition;
 }
 
 a:hover {
@@ -85,6 +89,14 @@ main {
 
 .hometop img {
   margin-top: 1em;
+}
+
+.postboard li {
+  transition: background-color $transition;
+}
+
+.postboard li:hover {
+  background-color: $nfs;
 }
 
 #wrap {
