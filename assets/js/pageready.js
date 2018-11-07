@@ -1,6 +1,4 @@
-document.onreadystatechange = function () {
-  if(document.readyState === "complete"){
+window.onload = function () {
     document.getElementById('wrap').style.display = 'block';
     document.getElementById('loader').style.display = 'none';
-  }
 }
