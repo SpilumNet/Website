@@ -4,7 +4,6 @@ body {
   max-width: 70em;
   color: #bfbfbf;
   margin: auto;
-  margin-top: 3.5em;
   font-family: sans-serif;
   background-attachment: fixed !important; }
 
@@ -13,13 +12,13 @@ body {
   width: 10px; }
 
 ::-webkit-scrollbar-track {
-  background: #383737; }
+  background: #353535; }
 
 ::-webkit-scrollbar-thumb {
-  background: #999; }
+  background: #bfbfbf; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #777; }
+  background: #ffffff; }
 
 a {
   color: #a5a5a5;
@@ -28,7 +27,7 @@ a {
   transition: 0.3s; }
 
 a:hover {
-  color: white; }
+  color: #ffffff; }
 
 footer {
   padding: 1em;
@@ -48,7 +47,7 @@ footer .copy {
   grid-row: 2; }
 
 .current {
-  color: white; }
+  color: #ffffff; }
 
 .adverttile {
   margin-top: 1em;
@@ -105,6 +104,7 @@ main {
   margin-top: 1em; }
 
 #wrap {
+  padding-top: 3.5em;
   background-color: #292929b0;
   display: none; }
 
@@ -131,7 +131,7 @@ nav {
   text-align: center; }
 
 .nav-items a {
-  line-height: 3em; }
+  padding: 1.1em; }
 
 .mob-nav {
   display: none;

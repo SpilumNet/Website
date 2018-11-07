@@ -1,9 +1,8 @@
 body {
-  background-color: #424242;
+  background-color: $bgcolor;
   max-width: 70em;
-  color: rgb(191, 191, 191);
+  color: $txtcolor;
   margin: auto;
-  margin-top: 3.5em;
   font-family: sans-serif;
   background-attachment: fixed !important;
 }
@@ -15,15 +14,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #383737;
+    background: $nfs;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #999;
+    background: $txtcolor;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #777;
+    background: $active;
 }
 
 a {
@@ -34,12 +33,12 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: $active;
 }
 
 footer {
   padding: 1em;
-  background-color: #353535;
+  background-color: $nfs;
   display: grid;
   grid-auto-flow: column;
 }
@@ -59,7 +58,7 @@ footer .copy {
 }
 
 .current {
-  color: white;
+  color: $active;
 }
 
 .adverttile {
@@ -89,6 +88,7 @@ main {
 }
 
 #wrap {
+  padding-top: 3.5em;
   background-color: #292929b0;
   display: none;
 }

@@ -7,19 +7,19 @@ nav {
 }
 
 .nav-items {
-  background-color: #353535;
+  background-color: $nfs;
   display: grid;
   grid-auto-flow: column;
   text-align: center;
 }
 
 .nav-items a {
-  line-height: 3em;
+  padding: 1.1em;
 }
 
 .mob-nav {
   display: none;
-  background-color: #353535;
+  background-color: $nfs;
   font-size: 2em;
   padding: 0.1em;
   cursor: pointer;
