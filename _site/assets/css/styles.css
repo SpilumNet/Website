@@ -53,6 +53,41 @@ footer .copy {
 .adverttile {
   margin-top: 1em;
   margin-bottom: 1em; }
+  .adverttile .ad1 .wrap {
+    padding: 0.5em 2em;
+    background: #2929296e;
+    background: linear-gradient(-45deg, transparent 25%, #383737 25%, #383737 50%, transparent 50%, transparent 75%, #383737 75%);
+    background-size: 27px 27px;
+    -webkit-animation: barberpole 30s infinite linear;
+    animation: barberpole 30s infinite linear; }
+  .adverttile .ad1 .wrap:hover span {
+    color: #00abe9; }
+  .adverttile .ad1 h2 {
+    float: left;
+    margin-bottom: 0; }
+  .adverttile .ad1 h4 {
+    float: right;
+    text-align: center;
+    background: #2929296e;
+    padding: 1em;
+    margin-right: 1em;
+    transition: background-color 0.3s; }
+  .adverttile .ad1 h4:hover {
+    background: #292929d4; }
+  .adverttile .ad1 .ad1Head {
+    display: inline-block; }
+  @media all and (max-width: 750px) {
+    .adverttile .ad1 .wrap {
+      padding: 0.5em;
+      font-size: 80%; }
+    .adverttile .ad1 h2 {
+      margin: 0;
+      float: none; }
+    .adverttile .ad1 h3 {
+      margin: 0.5em 0; }
+    .adverttile .ad1 h4 {
+      margin: 0;
+      float: none; } }
 
 main {
   padding: 0.5em 2em;
@@ -270,50 +305,6 @@ nav {
 
   .slidingVertical h2 {
     padding-bottom: 1.5em; } }
-.ad1 {
-  padding: 0.5em 2em;
-  background: #2929296e;
-  background: linear-gradient(-45deg, transparent 25%, #383737 25%, #383737 50%, transparent 50%, transparent 75%, #383737 75%);
-  background-size: 27px 27px;
-  -webkit-animation: barberpole 30s infinite linear;
-  animation: barberpole 30s infinite linear; }
-
-.ad1:hover span {
-  color: #00abe9; }
-
-.ad1 h2 {
-  float: left;
-  margin-bottom: 0; }
-
-.ad1 h4 {
-  float: right;
-  text-align: center;
-  background: #2929296e;
-  padding: 1em;
-  margin-right: 1em;
-  transition: background-color 0.3s; }
-
-.ad1 h4:hover {
-  background: #292929d4; }
-
-.ad1Head {
-  display: inline-block; }
-
-@media all and (max-width: 750px) {
-  .ad1 {
-    padding: 0.5em;
-    font-size: 80%; }
-
-  .ad1 h2 {
-    margin: 0;
-    float: none; }
-
-  .ad1 h3 {
-    margin: 0.5em 0; }
-
-  .ad1 h4 {
-    margin: 0;
-    float: none; } }
 @font-face {
   font-family: "Icomoon";
   src: url("../fonts/icomoon/fonts/icomoon.eot");
