@@ -13,3 +13,8 @@
 - name: Staff
   link: /staff.html
   icon: icon-profile
+
+- name: Github
+  link: https://github.com/tristanpn02/tristanpn02.github.io/
+  icon: icon-github
+  target: blank
