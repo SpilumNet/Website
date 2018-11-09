@@ -348,6 +348,9 @@ ul {
 
   .slidingVertical h2 {
     padding-bottom: 1.5em; } }
+.highlight {
+  background-color: black; }
+
 .language-html {
   color: beige; }
   .language-html .nt {
