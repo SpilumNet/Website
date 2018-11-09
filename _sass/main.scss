@@ -19,6 +19,10 @@ nav {
   font-size: 2em;
 }
 
+pre {
+  overflow: auto;
+}
+
 .social-items {
   grid-auto-flow: row;
   display: grid;

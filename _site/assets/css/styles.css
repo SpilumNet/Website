@@ -30,8 +30,7 @@ nav .mob-nav {
   display: none;
   background-color: #353535;
   font-size: 2em;
-  padding: 0.1em;
-  cursor: pointer; }
+  padding: 0.1em; }
 nav .mob-nav span {
   float: right; }
 nav .mob-togg {
@@ -64,6 +63,9 @@ nav .mob-togg {
   right: 5%;
   z-index: 10;
   font-size: 2em; }
+
+pre {
+  overflow: auto; }
 
 .social-items {
   grid-auto-flow: row;
@@ -346,6 +348,15 @@ ul {
 
   .slidingVertical h2 {
     padding-bottom: 1.5em; } }
+.language-html {
+  color: beige; }
+  .language-html .nt {
+    color: indianred; }
+  .language-html .na {
+    color: darksalmon; }
+  .language-html .s {
+    color: lightgreen; }
+
 @font-face {
   font-family: "Icomoon";
   src: url("../fonts/icomoon/fonts/icomoon.eot");
