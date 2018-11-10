@@ -4,6 +4,8 @@ type: blog
 description: Markdown code block test
 ---
 
+The following are example blocks of code from different languages, the purpose of this is to setup and test the Redcarpet Code Block system.
+
 ## HTML
 ```html
 <h1>Hello there!fghjdfghjhgfdfghjhfdfghjfdfghjhgfdfghgfdfghgfdgh</h1>
@@ -51,4 +53,21 @@ namespace HelloWorld {
       console.ReadKey();
     }
   }
-}```
+}
+```
+
+## Ruby
+```ruby
+n = 7
+def fibonacci(n)
+  if n == 1
+    1
+  elseif n == 2
+    1
+  else
+    fibonacci(n-1) + fibonacci(n-2)
+  end
+end
+
+puts "#{n}'s fibonacci value is #{fibonacci(n)}"
+```

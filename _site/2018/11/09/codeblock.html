@@ -62,6 +62,8 @@
   
 </p>
 
+<p>The following are example blocks of code from different languages, the purpose of this is to setup and test the Redcarpet Code Block system.</p>
+
 <h2>HTML</h2>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Hello there!fghjdfghjhgfdfghjhfdfghjfdfghjhgfdfghgfdfghgfdgh<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"test"</span><span class="nt">&gt;</span>
@@ -102,7 +104,21 @@
       <span class="n">console</span><span class="p">.</span><span class="nf">ReadKey</span><span class="p">();</span>
     <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span><span class="err">```</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Ruby</h2>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="mi">1</span>
+  <span class="n">elseif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="mi">1</span>
+  <span class="k">else</span>
+    <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">n</span><span class="si">}</span><span class="s2">'s fibonacci value is </span><span class="si">#{</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div>
 
       <div class="social-btn">

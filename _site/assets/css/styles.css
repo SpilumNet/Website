@@ -80,6 +80,8 @@ pre {
     color: cornflowerblue; }
   .highlight pre .nc {
     color: bisque; }
+  .highlight pre .n {
+    color: orange; }
   .highlight pre .k {
     color: mediumorchid; }
 
