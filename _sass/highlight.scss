@@ -1,17 +1,22 @@
-.highlight {
+pre {
   background-color: black;
   padding: 0.5em;
-}
-
-.language-html {
-  color: beige;
-  .nt {
+  .s, .s2 {
+    color: lightgreen;
+  }
+  .nt, .nb {
     color: indianred;
   }
   .na {
     color: darksalmon;
   }
-  .s {
-    color: lightgreen;
+  .nf, .nx {
+    color: cornflowerblue;
+  }
+  .nc {
+    color: bisque;
+  }
+  .k {
+    color: mediumorchid;
   }
 }

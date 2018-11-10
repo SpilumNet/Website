@@ -67,6 +67,22 @@ nav .mob-togg {
 pre {
   overflow: auto; }
 
+.highlight pre {
+  background-color: black;
+  padding: 0.5em; }
+  .highlight pre .s, .highlight pre .s2 {
+    color: lightgreen; }
+  .highlight pre .nt, .highlight pre .nb {
+    color: indianred; }
+  .highlight pre .na {
+    color: darksalmon; }
+  .highlight pre .nf, .highlight pre .nx {
+    color: cornflowerblue; }
+  .highlight pre .nc {
+    color: bisque; }
+  .highlight pre .k {
+    color: mediumorchid; }
+
 .social-items {
   grid-auto-flow: row;
   display: grid;
@@ -348,19 +364,6 @@ ul {
 
   .slidingVertical h2 {
     padding-bottom: 1.5em; } }
-.highlight {
-  background-color: black;
-  padding: 0.5em; }
-
-.language-html {
-  color: beige; }
-  .language-html .nt {
-    color: indianred; }
-  .language-html .na {
-    color: darksalmon; }
-  .language-html .s {
-    color: lightgreen; }
-
 @font-face {
   font-family: "Icomoon";
   src: url("../fonts/icomoon/fonts/icomoon.eot");

@@ -23,6 +23,10 @@ pre {
   overflow: auto;
 }
 
+.highlight {
+  @import "highlight"
+}
+
 .social-items {
   grid-auto-flow: row;
   display: grid;
