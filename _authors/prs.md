@@ -1,7 +1,7 @@
 ---
 short_name: prs
 name: Páll Rúnar
-position: Webmaster
+position: Server Manager
 ---
 ### The owner and head of Spilum.net's server operations.
 
