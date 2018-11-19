@@ -1,4 +1,4 @@
-if (document.cookie === false){
+if (document.cookie === ""){
 $(document).ready(function(){
     setTimeout(function () {
         $("#cookieConsent").fadeIn(200);
