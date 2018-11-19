@@ -54,6 +54,7 @@
   grid-auto-flow: row;
   visibility: hidden;
   opacity: 0;
+  display: none;
   pointer-events: none;
   transform: translateY(-2em);
   transition: all $transition ease-in-out 0s, visibility 0s linear $transition, z-index 0s linear 0.01s;
