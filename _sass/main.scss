@@ -23,6 +23,10 @@ pre {
   overflow: auto;
 }
 
+.cookieConsent {
+  @import "cookie"
+}
+
 .highlight {
   @import "highlight"
 }
