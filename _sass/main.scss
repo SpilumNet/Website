@@ -112,7 +112,49 @@ footer ul {
 
 footer .copy {
   text-align: right;
-  grid-row: 2;
+  grid-row: 3;
+  height: 25px;
+  font-size: 25px;
+
+  img {
+    max-height: 79%;
+  }
+}
+
+caption {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  overflow: auto;
+  display: block;
+}
+
+thead {
+  background: $nfs;
+  text-align: left;
+}
+
+td {
+  min-width: 6em;
+}
+
+
+tbody tr {
+  background: #332e2e66;
+}
+
+tbody tr:nth-child(even) {
+  background: #62626266;
+}
+
+th, td {
+  padding: 10px 15px;
 }
 
 .current {
@@ -129,7 +171,6 @@ footer .copy {
 
 main {
   padding: 0.5em 2em;
-  margin-top: 1em;
   margin-bottom: 1em;
   background-color: #2929296e;
 }
@@ -137,7 +178,6 @@ main {
 .hometop {
   background: url('/assets/img/topHead.jpg');
   margin-top: 1em;
-  margin-bottom: 1em;
   padding: 1% 1em 8%;
 }
 

@@ -62,17 +62,18 @@
 
 <p>The following are example blocks of code from different languages, the purpose of this is to setup and test the Redcarpet Code Block system.</p>
 
-<h2>HTML</h2>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Hello there!fghjdfghjhgfdfghjhfdfghjfdfghjhgfdfghgfdfghgfdgh<span class="nt">&lt;/h1&gt;</span>
+<h2 id="html">HTML</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Hello there!fghjdfghjhgfdfghjhfdfghjfdfghjhgfdfghgfdfghgfdgh<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"test"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul&gt;</span>
     <span class="nt">&lt;li&gt;</span>Hewwo<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>OwO<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-<h2>PYTHON</h2>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">bool1</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="python">PYTHON</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool1</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
   <span class="k">print</span><span class="p">(</span><span class="s">'Hello'</span><span class="p">)</span>
@@ -80,9 +81,10 @@
     <span class="k">print</span><span class="p">(</span><span class="s">'IT IS'</span><span class="p">,</span> <span class="n">bool1</span>
 
 <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<h2>JAVASCRIPT</h2>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">trigger</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div>
+
+<h2 id="javascript">JAVASCRIPT</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">trigger</span><span class="p">()</span> <span class="p">{</span>
 
   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"hover"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"mouseover"</span><span class="p">,</span> <span class="nx">popup</span><span class="p">);</span>
 
@@ -90,9 +92,10 @@
     <span class="nx">alert</span><span class="p">(</span><span class="s2">"Welcome to my WebPage!!!"</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-<h2>C#</h2>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="c">C#</h2>
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">namespace</span> <span class="nn">HelloWorld</span> <span class="p">{</span>
   <span class="k">class</span> <span class="nc">hello</span> <span class="p">{</span>
     <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span> <span class="p">{</span>
@@ -103,9 +106,10 @@
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-<h2>Ruby</h2>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
+</code></pre></div></div>
+
+<h2 id="ruby">Ruby</h2>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
     <span class="mi">1</span>
@@ -117,7 +121,8 @@
 <span class="k">end</span>
 
 <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">n</span><span class="si">}</span><span class="s2">'s fibonacci value is </span><span class="si">#{</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div>
+</code></pre></div></div>
+
 
       <div class="social-btn">
 <div class="wrap">
@@ -178,7 +183,15 @@
     </li>
     
   </ul>
-  <p class="copy">© 2018 <img src="/assets/svg/sp-net.svg" height="12em"></p>
+
+  <ul>
+    <h4>Information</h4>
+    <li>
+      <a href="/todo.html">To-do list</a>
+    </li>
+  </ul>
+
+  <p class="copy">© 2018 <img src="/assets/svg/sp-net.svg"></p>
 </footer>
 
 <script src="/assets/js/bgen.js"></script>
