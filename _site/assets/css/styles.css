@@ -72,7 +72,10 @@ nav .mob-togg {
   #contact input, #contact textarea {
     width: 100%;
     border: none;
-    background: #404552; }
+    background: #404552;
+    color: #bfbfbf !important; }
+  #contact input {
+    height: 2em; }
   #contact input[type="submit"] {
     padding: .2em;
     font-size: 1.3em;

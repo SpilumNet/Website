@@ -26,6 +26,11 @@ nav {
     background: #404552;
     color: $txtcolor !important;
   }
+
+  input {
+    height: 2em;
+  }
+
   input[type="submit"] {
     padding: .2em;
     font-size: 1.3em;
