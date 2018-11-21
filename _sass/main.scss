@@ -24,7 +24,6 @@ nav {
     width: 100%;
     border: none;
     background: #404552;
-    color: $txtcolor !important;
   }
 
   input {
@@ -35,6 +34,7 @@ nav {
     padding: .2em;
     font-size: 1.3em;
     font-weight: bold;
+    color: $txtcolor !important;
   }
   legend {
     font-weight: bold;
