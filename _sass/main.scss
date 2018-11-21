@@ -19,6 +19,25 @@ nav {
   font-size: 2em;
 }
 
+#contact {
+  input, textarea {
+    width: 100%;
+    border: none;
+    background: #404552;
+  }
+  input[type="submit"] {
+    padding: .2em;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  legend {
+    font-weight: bold;
+  }
+  max-width: 60%;
+  margin: auto;
+  font-size: 1.1em;
+}
+
 pre {
   overflow: auto;
 }

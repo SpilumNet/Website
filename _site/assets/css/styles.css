@@ -65,6 +65,21 @@ nav .mob-togg {
   z-index: 10;
   font-size: 2em; }
 
+#contact {
+  max-width: 60%;
+  margin: auto;
+  font-size: 1.1em; }
+  #contact input, #contact textarea {
+    width: 100%;
+    border: none;
+    background: #404552; }
+  #contact input[type="submit"] {
+    padding: .2em;
+    font-size: 1.3em;
+    font-weight: bold; }
+  #contact legend {
+    font-weight: bold; }
+
 pre {
   overflow: auto; }
 

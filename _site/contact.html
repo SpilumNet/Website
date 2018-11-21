@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>To-do List</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#353535" />
@@ -51,29 +51,27 @@
 </nav>
 
     <main>
-      <h1>To-do List</h1>
+      <form id="contact" method="post">
+  <fieldset>
+    <legend>Contact us</legend>
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Task</th>
-      <th scope="col">Notes</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Make to-do list</td>
-      <td>This thing right here</td>
-      <td>Ongoing</td>
-    </tr>
-    <tr>
-      <td>Embed Discord onto site</td>
-      <td>First make a discord server</td>
-      <td>Planned</td>
-    </tr>
-  </tbody>
-</table>
+    <input type="hidden" name="submitted" value="1">
+
+    <label for="name">Your full name *</label><br>
+    <input type="text" name="name" maxlength="50" required><br><br>
+
+    <label for="email">Email Address *</label><br>
+    <input type="email" name="email" maxlength="50" required><br><br>
+
+    <label for="phone">Phone Number</label><br>
+    <input type="tel" name="phone" maxlength="15"><br><br>
+
+    <label for="message">Message *</label><br>
+    <textarea name="message" rows="10" required></textarea><br><br>
+
+    <input type="submit" name="Submit" value="Submit">
+  </fieldset>
+</form>
 
       <div class="social-btn">
 <div class="wrap">
