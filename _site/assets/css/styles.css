@@ -73,13 +73,14 @@ nav .mob-togg {
     width: 100%;
     border: none;
     background: #404552;
-    color: #bfbfbf !important; }
+    color: #bfbfbf; }
   #contact input {
     height: 2em; }
   #contact input[type="submit"] {
     padding: .2em;
     font-size: 1.3em;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #bfbfbf !important; }
   #contact legend {
     font-weight: bold; }
 
