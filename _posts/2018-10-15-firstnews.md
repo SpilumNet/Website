@@ -1,5 +1,5 @@
 ---
-author: apher
+author: tpan
 type: news
 description: This is the first news post
 ---
