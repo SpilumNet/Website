@@ -3,7 +3,8 @@ title: About
 ---
 # About page
 
-So basically this is just a blogging website.
-You can find posts I (Apher) make about random stuff.
+This website is originally a project for a college course.
 
-In reality, this is just a school project ^w^
+This static website serves as a place to get information about the services that Spilum Networks has to offer.
+
+Currently it solely serves the purpose as a school project, but the plan is to eventually open up services for this website.
