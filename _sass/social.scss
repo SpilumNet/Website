@@ -1,0 +1,42 @@
+.wrap {
+  position: fixed;
+  bottom: 1em;
+  right: 5%;
+  z-index: 10;
+  font-size: 2em;
+}
+
+.social-items {
+  grid-auto-flow: row;
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  bottom: 0;
+  z-index: 5;
+  position: fixed;
+  transition: all $transition ease-in-out 0s, visibility 0s linear $transition, z-index 0s linear 0.01s;
+}
+
+.social-togg {
+  z-index: 10;
+  display: none;
+}
+
+.social-togg:checked ~ .social-items {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  bottom: 2.5em;
+  position: fixed;
+  transition-delay: 0s, 0s, $transition;
+}
+
+.wrap label:hover {
+  color: $active;
+}
+
+.wrap label {
+  cursor: pointer;
+  transition: $transition;
+}

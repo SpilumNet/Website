@@ -58,13 +58,6 @@ nav .mob-togg {
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s; } }
 
-.social-btn {
-  position: fixed;
-  bottom: 1em;
-  right: 5%;
-  z-index: 10;
-  font-size: 2em; }
-
 #contact {
   max-width: 30em;
   margin: auto;
@@ -89,6 +82,102 @@ nav .mob-togg {
 
 pre {
   overflow: auto; }
+
+a {
+  color: #a5a5a5;
+  text-decoration: none;
+  transition: 0.3s; }
+
+a:hover {
+  color: #ffffff; }
+
+/* Footer */
+footer {
+  padding: 1em;
+  background-color: #353535;
+  display: grid;
+  grid-auto-flow: column; }
+  footer h4 {
+    margin-top: 0; }
+  footer ul {
+    grid-row-start: 1;
+    grid-row-end: 3; }
+  footer .copy {
+    text-align: right;
+    grid-row: 3;
+    height: 25px;
+    font-size: 25px; }
+    footer .copy img {
+      max-height: 79%; }
+
+/* ------------- */
+caption {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  overflow: auto;
+  display: block; }
+
+thead {
+  background: #353535;
+  text-align: left; }
+
+td {
+  min-width: 6em; }
+
+tbody tr {
+  background: #332e2e66; }
+
+tbody tr:nth-child(even) {
+  background: #62626266; }
+
+th, td {
+  padding: 10px 15px; }
+
+main {
+  padding: 0.5em 2em;
+  margin-bottom: 1em;
+  background-color: #2929296e; }
+
+ul {
+  list-style: none; }
+
+.social-btn .wrap {
+  position: fixed;
+  bottom: 1em;
+  right: 5%;
+  z-index: 10;
+  font-size: 2em; }
+.social-btn .social-items {
+  grid-auto-flow: row;
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  bottom: 0;
+  z-index: 5;
+  position: fixed;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
+.social-btn .social-togg {
+  z-index: 10;
+  display: none; }
+.social-btn .social-togg:checked ~ .social-items {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  bottom: 2.5em;
+  position: fixed;
+  transition-delay: 0s, 0s, 0.3s; }
+.social-btn .wrap label:hover {
+  color: #ffffff; }
+.social-btn .wrap label {
+  cursor: pointer;
+  transition: 0.3s; }
 
 .cookieConsent {
   /*Cookie Consent Begin*/
@@ -150,36 +239,6 @@ pre {
   .highlight pre .k {
     color: mediumorchid; }
 
-.social-items {
-  grid-auto-flow: row;
-  display: grid;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  bottom: 0;
-  z-index: 5;
-  position: fixed;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
-
-.social-togg {
-  z-index: 10;
-  display: none; }
-
-.social-btn label:hover {
-  color: #ffffff; }
-
-.social-btn label {
-  cursor: pointer;
-  transition: 0.3s; }
-
-.social-togg:checked ~ .social-items {
-  visibility: visible;
-  pointer-events: auto;
-  opacity: 1;
-  bottom: 2.5em;
-  position: fixed;
-  transition-delay: 0s, 0s, 0.3s; }
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px; }
@@ -193,63 +252,7 @@ pre {
 ::-webkit-scrollbar-thumb:hover {
   background: #ffffff; }
 
-a {
-  color: #a5a5a5;
-  text-decoration: none;
-  transition: 0.3s; }
-
-a:hover {
-  color: #ffffff; }
-
-footer {
-  padding: 1em;
-  background-color: #353535;
-  display: grid;
-  grid-auto-flow: column; }
-
-footer h4 {
-  margin-top: 0; }
-
-footer ul {
-  grid-row-start: 1;
-  grid-row-end: 3; }
-
-footer .copy {
-  text-align: right;
-  grid-row: 3;
-  height: 25px;
-  font-size: 25px; }
-  footer .copy img {
-    max-height: 79%; }
-
-caption {
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-bottom: 1em; }
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: fixed;
-  overflow: auto;
-  display: block; }
-
-thead {
-  background: #353535;
-  text-align: left; }
-
-td {
-  min-width: 6em; }
-
-tbody tr {
-  background: #332e2e66; }
-
-tbody tr:nth-child(even) {
-  background: #62626266; }
-
-th, td {
-  padding: 10px 15px; }
-
+/* ------------- */
 .current {
   color: #ffffff; }
 
@@ -292,11 +295,6 @@ th, td {
       margin: 0;
       float: none; } }
 
-main {
-  padding: 0.5em 2em;
-  margin-bottom: 1em;
-  background-color: #2929296e; }
-
 .hometop {
   background: url("/assets/img/topHead.jpg");
   margin-top: 1em;
@@ -315,9 +313,6 @@ main {
   padding-top: 3.5em;
   background-color: #292929b0;
   display: none; }
-
-ul {
-  list-style: none; }
 
 @media all and (max-width: 750px) {
   .hometop {
