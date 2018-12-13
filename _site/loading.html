@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Loading Screen...</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#353535" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function() {
+      $("#wrap").toggle();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="loader">Loading...</div>
+  <main>
+    <style media="screen">
+  #loader {
+    zoom: 2;
+  }
+</style>
+  </main>
+  <script src="/assets/js/bgen.js"></script>
+</body>
+
+</html>
