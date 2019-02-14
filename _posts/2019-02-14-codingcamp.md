@@ -8,50 +8,111 @@ Hér getið þið fundið svör við dæmin sem að þið hafið gert ^w^
 ## PYTHON
 ```python
 def main():
+    s = ' '
     func = ""
-    function_dict = {'summary':summary, 'multi':multi, 'prime':prime, 'dice':dice }
+    funcls = ['hewwo', 'gagnatypa', 'reikniadgerd', 'mathsafn', 'heiltolur','beraSaman', 'summa', 'margfalda', 'primtolur', 'teningur']
+    
+    function_dict = {'hewwo':hewwo, 'gagnatypa':gagnatypa,
+                     'reikniadgerd':reikniadgerd, 'mathsafn':mathsafn,
+                     'heiltolur':heiltolur, 'beraSaman':beraSaman,
+                     'summa':summa, 'margfalda':margfalda,
+                     'primtolur':primtolur, 'teningur':teningur }
     
     while func != "exit":
         print("=" * 40)
-        print("summary\t multi\t prime\t dice\t")
+        for i in range(len(funcls)):
+            print(funcls[i], end=4*s)
+            if (i+1) % 4 == 0:
+                print()
+        print()
         func = input(">>> ")
         function_dict[func]()
 
-def summary():
-    low = int(input("Sláðu inn minnstu töluna: "))
-    high  = int(input("Sláðu inn hæstu töluna: "))
-    summary = 0
-    for x in range(low,high + 1, 1):
-        summary = summary + x
-    print("Summa alla talna frá", low, "til", str(high) + ":", summary)
+def hewwo():
+    print("Hewwo OwO *gibs all da huggos* ^w^")
+
+def gagnatypa():
+    nafn = input("Hvað heitir þú? ")
+    print("Góðan daginn", nafn + "! Velkominn í forritunarbúðir tækniskólans")
+    aldur = input("Hvað ertu gamall/gömul? ")
+    print("Nú nú, þú ert bara", aldur, "ára!")
+
+def reikniadgerd():
+    C = input("Sláðu inn celsíus")
+    C = float(C)
+    F = (1.8 * C) + 32
+    print("Farenheit:", str(F))
 
 
-def multi():
+def mathsafn():
+    number = int(input("Sláðu inn tölu: "))
+    power  = int(input("Sláðu inn veldi: "))
+    outcome = number ** power
+    print(outcome)
+
+def heiltolur():
+    degres = int(input("Sláðu inn gráður: "))
+    wholerings = degres // 360
+    leftover = degres - (wholerings * 360)
+    print("Heilir hringir : " + str(wholerings))
+    print("Afangur af gráðum : " + str(leftover))
+
+def beraSaman():
+    fyrritala = int(input("Sláðu inn tölu (fyrri): "))
+    seinnitala = int(input("Sláðu inn tölu (seinni): "))
+
+    if fyrritala == seinnitala:
+        print("tölurnar eru jafnar")
+        
+    elif fyrritala > seinnitala:
+        print(str(fyrritala) + " er stærri en " + str(seinnitala))
+        
+    else:
+        print(str(seinnitala) +" er stærri en " + str(fyrritala))
+
+def summa():
+    nedrimork = int(input("Sláðu inn minnstu töluna: "))
+    efrimork  = int(input("Sláðu inn hæstu töluna: "))
+    summa = 0
+    
+    for x in range(nedrimork,efrimork + 1, 1):
+        summa = summa + x
+        
+    print("Summa alla talna frá", nedrimork, "til", str(efrimork) + ":", summa)
+
+
+def margfalda():
     for j in range(1,11):
         output = ""
+        
         for x in range(1,11):
             output = output + str(x * j) + " "
+            
         print(output)
 
-def prime():
+def primtolur():
     for x in range(2,51):
         prime = True
+        
         for j in range(2, x//2+1):
             if x % j == 0:
                 prime = False
                 break
+            
         if prime:
             print(x)
 
-def dice():
+def teningur():
     from random import randint
     while True:
         try:
-            diceNum = int(input("Hversu oft viltu kasta? "))
-            for i in range(diceNum):
+            kost = int(input("Hversu oft viltu kasta? "))
+            for i in range(kost):
                 print("Kast", str(i+1) + ":", randint(1,6))
+                
         except:
             break
 
 main()
+
 ```
