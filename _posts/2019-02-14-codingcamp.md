@@ -28,6 +28,7 @@ def main():
         print()
         func = input(">>> ")
         function_dict[func]()
+        input("[ENTER]")
 
 def hewwo():
     print("Hewwo OwO *gibs all da huggos* ^w^")
