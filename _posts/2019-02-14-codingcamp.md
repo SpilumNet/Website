@@ -39,7 +39,7 @@ def gagnatypa():
     print("Nú nú, þú ert bara", aldur, "ára!")
 
 def reikniadgerd():
-    C = input("Sláðu inn celsíus")
+    C = input("Sláðu inn celsíus: ")
     C = float(C)
     F = (1.8 * C) + 32
     print("Farenheit:", str(F))
