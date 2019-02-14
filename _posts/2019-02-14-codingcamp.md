@@ -50,7 +50,7 @@ def mathsafn():
     number = int(input("Sláðu inn tölu: "))
     power  = int(input("Sláðu inn veldi: "))
     outcome = number ** power
-    print(outcome)
+    print(number, "í", power, "veldi er:", outcome)
 
 def heiltolur():
     degres = int(input("Sláðu inn gráður: "))
