@@ -4,7 +4,8 @@ type: blog
 description: Forritunarbúðir 2019
 ---
 
-Hér getið þið fundið svör við dæmin sem að við höfum farið í gegnum o3o
+### Hér getið þið fundið svör við dæmin sem að við höfum farið í gegnum o3o
+Endilega afritið þetta inní IDE-ið ykkar til þess að skoða eða breyta einhverju!
 ## PYTHON
 ```python
 def main():
