@@ -8,7 +8,11 @@ description: Forritunarbúðir 2019
 Endilega afritið þetta inní IDE-ið ykkar til þess að skoða eða breyta einhverju!
 ## PYTHON
 ```python
+import os
+from os import system
+
 def main():
+    
     s = ' '
     func = ""
     funcls = ['hewwo', 'gagnatypa', 'reikniadgerd', 'mathsafn', 'heiltolur','beraSaman', 'summa', 'margfalda', 'primtolur', 'teningur']
@@ -20,6 +24,7 @@ def main():
                      'primtolur':primtolur, 'teningur':teningur }
     
     while func != "exit":
+        os.system('cls')
         print("=" * 40)
         for i in range(len(funcls)):
             print(funcls[i], end=4*s)
@@ -27,6 +32,7 @@ def main():
                 print()
         print()
         func = input(">>> ")
+        print("-" * 40)
         function_dict[func]()
         input("[ENTER]")
 
@@ -116,5 +122,4 @@ def teningur():
             break
 
 main()
-
 ```
