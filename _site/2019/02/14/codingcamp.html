@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Codingcamp</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#353535" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function() {
+      $("#wrap").toggle();
+      $("#loader").toggle();
+    });
+  </script>
+</head>
+
+
+<body>
+  <div id="loader">Loading...</div>
+  <div id="wrap">
+    <nav>
+  <div class="wrap">
+  <input type="checkbox" id="toggle-nav" class="mob-togg">
+  <label for="toggle-nav" class="mob-nav">Spilum.net<span class="icon-menu"></span></label>
+  <div class="nav-items"><a class="head" href="/">Spilum.net</a>
+  
+  <a href="/" target="" >
+    <span class="icon-home3"></span> Home
+  </a>
+  
+  <a href="/about.html" target="" >
+    <span class="icon-book"></span> About
+  </a>
+  
+  <a href="/blog.html" target="" >
+    <span class="icon-pencil"></span> Blog
+  </a>
+  
+  <a href="/staff.html" target="" >
+    <span class="icon-profile"></span> Staff
+  </a>
+  
+  <a href="https://github.com/tristanpn02/tristanpn02.github.io/" target="blank" >
+    <span class="icon-github"></span> Github
+  </a>
+  
+  </div>
+  </div>
+</nav>
+
+    <main>
+      <h1>Codingcamp</h1>
+
+<p>
+  Posted 14 Feb 2019<br>
+  
+  
+  
+  - <a href="/authors/tpan.html">Tristan Andersen</a>
+  
+</p>
+
+<h3 id="hér-getið-þið-fundið-svör-við-dæmin-sem-að-við-höfum-farið-í-gegnum-o3o">Hér getið þið fundið svör við dæmin sem að við höfum farið í gegnum o3o</h3>
+<p>Endilega afritið þetta inní IDE-ið ykkar til þess að skoða eða breyta einhverju!</p>
+<h2 id="python">PYTHON</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    
+    <span class="n">s</span> <span class="o">=</span> <span class="s">' '</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="n">funcls</span> <span class="o">=</span> <span class="p">[</span><span class="s">'hewwo'</span><span class="p">,</span> <span class="s">'gagnatypa'</span><span class="p">,</span> <span class="s">'reikniadgerd'</span><span class="p">,</span> <span class="s">'mathsafn'</span><span class="p">,</span> <span class="s">'heiltolur'</span><span class="p">,</span><span class="s">'beraSaman'</span><span class="p">,</span> <span class="s">'summa'</span><span class="p">,</span> <span class="s">'margfalda'</span><span class="p">,</span> <span class="s">'primtolur'</span><span class="p">,</span> <span class="s">'teningur'</span><span class="p">]</span>
+    
+    <span class="n">function_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'hewwo'</span><span class="p">:</span><span class="n">hewwo</span><span class="p">,</span> <span class="s">'gagnatypa'</span><span class="p">:</span><span class="n">gagnatypa</span><span class="p">,</span>
+                     <span class="s">'reikniadgerd'</span><span class="p">:</span><span class="n">reikniadgerd</span><span class="p">,</span> <span class="s">'mathsafn'</span><span class="p">:</span><span class="n">mathsafn</span><span class="p">,</span>
+                     <span class="s">'heiltolur'</span><span class="p">:</span><span class="n">heiltolur</span><span class="p">,</span> <span class="s">'beraSaman'</span><span class="p">:</span><span class="n">beraSaman</span><span class="p">,</span>
+                     <span class="s">'summa'</span><span class="p">:</span><span class="n">summa</span><span class="p">,</span> <span class="s">'margfalda'</span><span class="p">:</span><span class="n">margfalda</span><span class="p">,</span>
+                     <span class="s">'primtolur'</span><span class="p">:</span><span class="n">primtolur</span><span class="p">,</span> <span class="s">'teningur'</span><span class="p">:</span><span class="n">teningur</span> <span class="p">}</span>
+    
+    <span class="k">while</span> <span class="n">func</span> <span class="o">!=</span> <span class="s">"exit"</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">'cls'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"="</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">funcls</span><span class="p">)):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">funcls</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"&gt;&gt;&gt; "</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"-"</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+        <span class="n">function_dict</span><span class="p">[</span><span class="n">func</span><span class="p">]()</span>
+        <span class="nb">input</span><span class="p">(</span><span class="s">"[ENTER]"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">hewwo</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hewwo OwO *gibs all da huggos* ^w^"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">gagnatypa</span><span class="p">():</span>
+    <span class="n">nafn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Hvað heitir þú? "</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Góðan daginn"</span><span class="p">,</span> <span class="n">nafn</span> <span class="o">+</span> <span class="s">"! Velkominn í forritunarbúðir tækniskólans"</span><span class="p">)</span>
+    <span class="n">aldur</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Hvað ertu gamall/gömul? "</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Nú nú, þú ert bara"</span><span class="p">,</span> <span class="n">aldur</span><span class="p">,</span> <span class="s">"ára!"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">reikniadgerd</span><span class="p">():</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn celsíus: "</span><span class="p">)</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.8</span> <span class="o">*</span> <span class="n">C</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Farenheit:"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">mathsafn</span><span class="p">():</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn tölu: "</span><span class="p">))</span>
+    <span class="n">power</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn veldi: "</span><span class="p">))</span>
+    <span class="n">outcome</span> <span class="o">=</span> <span class="n">number</span> <span class="o">**</span> <span class="n">power</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="s">"í"</span><span class="p">,</span> <span class="n">power</span><span class="p">,</span> <span class="s">"veldi er:"</span><span class="p">,</span> <span class="n">outcome</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">heiltolur</span><span class="p">():</span>
+    <span class="n">degres</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn gráður: "</span><span class="p">))</span>
+    <span class="n">wholerings</span> <span class="o">=</span> <span class="n">degres</span> <span class="o">//</span> <span class="mi">360</span>
+    <span class="n">leftover</span> <span class="o">=</span> <span class="n">degres</span> <span class="o">-</span> <span class="p">(</span><span class="n">wholerings</span> <span class="o">*</span> <span class="mi">360</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Heilir hringir : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">wholerings</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Afangur af gráðum : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">leftover</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">beraSaman</span><span class="p">():</span>
+    <span class="n">fyrritala</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn tölu (fyrri): "</span><span class="p">))</span>
+    <span class="n">seinnitala</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn tölu (seinni): "</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">fyrritala</span> <span class="o">==</span> <span class="n">seinnitala</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"tölurnar eru jafnar"</span><span class="p">)</span>
+        
+    <span class="k">elif</span> <span class="n">fyrritala</span> <span class="o">&gt;</span> <span class="n">seinnitala</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fyrritala</span><span class="p">)</span> <span class="o">+</span> <span class="s">" er stærri en "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">seinnitala</span><span class="p">))</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">seinnitala</span><span class="p">)</span> <span class="o">+</span><span class="s">" er stærri en "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fyrritala</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">summa</span><span class="p">():</span>
+    <span class="n">nedrimork</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn minnstu töluna: "</span><span class="p">))</span>
+    <span class="n">efrimork</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Sláðu inn hæstu töluna: "</span><span class="p">))</span>
+    <span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nedrimork</span><span class="p">,</span><span class="n">efrimork</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">summa</span> <span class="o">=</span> <span class="n">summa</span> <span class="o">+</span> <span class="n">x</span>
+        
+    <span class="k">print</span><span class="p">(</span><span class="s">"Summa alla talna frá"</span><span class="p">,</span> <span class="n">nedrimork</span><span class="p">,</span> <span class="s">"til"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">efrimork</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span><span class="p">,</span> <span class="n">summa</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">margfalda</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">""</span>
+        
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">output</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span>
+            
+        <span class="k">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">primtolur</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">51</span><span class="p">):</span>
+        <span class="n">prime</span> <span class="o">=</span> <span class="bp">True</span>
+        
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">prime</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">break</span>
+            
+        <span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">teningur</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">kost</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Hversu oft viltu kasta? "</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">kost</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Kast"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">":"</span><span class="p">,</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+                
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">break</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+
+      <div class="social-btn">
+<div class="wrap">
+  <input type="checkbox" id="toggle-soc" class="social-togg">
+  <label for="toggle-soc"><span class="icon-bubbles4"></span></label>
+  <div class="social-items">
+    
+    <a href="http://discord.gg/" target ="_blank">
+      <span class="icon-discord"</span>
+    </a>
+    
+    <a href="http://youtube.com" target ="_blank">
+      <span class="icon-youtube"</span>
+    </a>
+    
+    <a href="http://twitch.tv" target ="_blank">
+      <span class="icon-twitch"</span>
+    </a>
+    
+  </div>
+</div>
+</div>
+
+    </main>
+    <div class="cookieConsent">
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's
+            Fine</a>
+    </div>
+</div>
+    <footer>
+  <ul>
+    <h4>Other Websites</h4>
+    
+    <li>
+      <a href="https://spilum.net" target="_blank">
+        Spilum.net
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://tia.spilum.net" target="_blank">
+        TIA
+      </a>
+    </li>
+    
+  </ul>
+
+  <ul>
+    <h4>Information</h4>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="/todo">To-do list</a>
+    </li>
+    <li>
+      <a href="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <p class="copy">© 2018 <a href="/"><img src="/assets/svg/sp-net.svg"></a></p>
+</footer>
+
+<script src="/assets/js/bgen.js"></script>
+<script src="/assets/js/cookie.js"></script>
+<script type="text/javascript"> var infolinks_pid = 3150552; var infolinks_wsid = 0; </script>
+<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+  </div>
+</body>
+
+</html>
