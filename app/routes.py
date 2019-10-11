@@ -1,6 +1,12 @@
 from app import app
 from flask import render_template
 import os
+from datetime import datetime
+
+
+@app.context_processor
+def inject_now():
+    return {'now': datetime.utcnow()}
 
 
 @app.errorhandler(404)
@@ -13,7 +19,7 @@ def index():
     project_list = []
     for project in os.listdir('./app/projects'):
         project_list.append(project)
-    return render_template('index.html', projects=project_list)
+    return render_template('index.html', projects=project_list, now=datetime.utcnow())
 
 
 @app.route('/about')
@@ -30,11 +36,15 @@ def todo():
 def contact():
     return render_template('information/contact.html')
 
+
 from .projects.kennitala import kennitala
+
 app.register_blueprint(kennitala.bp)
 
 from .projects.store import store
+
 app.register_blueprint(store.bp)
 
 from .projects.news import news
+
 app.register_blueprint(news.bp)
