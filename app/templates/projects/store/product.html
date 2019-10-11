@@ -1,0 +1,18 @@
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            {% endif %}
+    {% endwith %}
+    <link href="{{ url_for('static', filename='projects/store/css/main.css') }}" rel="stylesheet">
+    <div class="product">
+        <img alt="" src="{{ product['img_url'] }}">
+        <h1>{{ product['title'] }}</h1>
+        <p>{{ product['description'] }}</p>
+        <h4>Price: {{ product['price'] }} ISK</h4>
+    <a href="/projects/store/add_to_cart/{{product.id}}">Add to Cart</a>
+    </div>
+    <hr>
+{% endblock %}

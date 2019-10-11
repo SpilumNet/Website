@@ -1,0 +1,17 @@
+<!doctype html>
+{% include "essential/head.html" %}
+
+<body class="text-light bg-dark">
+    {% include "essential/navigation.html" %}
+    <main class="bg-secondary my-3 py-2 px-4">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+    {% include "essential/footer.html" %}
+</body>

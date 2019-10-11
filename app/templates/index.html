@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Projects</h2>
+    <div class="row text-center">
+        {% for project in projects %}
+            <a href="/projects/{{ project }}" class="col-md" target="_blank">
+                <div class="bg-dark">
+                    <h3>{{ project }}</h3>
+                    <iframe src="/projects/{{ project }}" width="100%" frameborder="0"></iframe>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

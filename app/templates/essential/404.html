@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<pre class="notFound">
+<code class="python px-4">
+@app.errorhandler(404)
+    def page_not_found(e):
+        return render_template('essential/404.html'), 404
+</code>
+</pre>
+{% endblock %}

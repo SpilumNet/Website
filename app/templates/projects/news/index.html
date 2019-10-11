@@ -1,0 +1,19 @@
+{% block content %}
+<section class="flex">
+{% for object in object_list %}
+    <article class="post">
+        <a href="{{ request.path }}/{{ object.id }}">
+            <header>
+                <div>
+                    <h1>{{ object['title'] }}</h1>
+                </div>
+            </header>
+            <img src="{{ object.image }}" alt="">
+        </a>
+        <br>
+        <a href="mailto:{{ object['author']['email'] }}"><em>{{ object['author']['email'] }}</em></a>
+    </article>
+<hr>
+{% endfor %}
+</section>
+{% endblock %}

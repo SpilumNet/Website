@@ -1,0 +1,37 @@
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                {% endif %}
+    {% endwith %}
+    <link href="{{ url_for('static', filename='projects/store/css/main.css') }}" rel="stylesheet">
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+
+        {% for key, value in display_cart.items() %}
+        <tr>
+            <td>{{value["name"]}}</td>
+            <td>{{value["qty"]}}</td>
+            <td>{{ "%.2f" % value["price"]}} ISK</td>
+            <td>{{ "%.2f" % (value["qty"] * value["price"])}} ISK</td>
+            <td><a href="/projects/store/remove_from_cart/{{ key }}">Remove</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Total: {{ "%.2f" % total }} ISK</h3>
+
+    <form action="/projects/store/checkout">
+        Email: <input , name="email" placeholder="name@example.ex" required type="email"><br>
+        Address: <input , name="address" placeholder="Example 123" required type="text"><br>
+        Phone: <input , name="phone" placeholder="123-1234" type="tel"><br><br>
+        <input type="submit" value="Checkout">
+    </form>
+{% endblock %}

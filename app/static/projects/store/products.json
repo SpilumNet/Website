@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "Banan",
+    "price": 999999999,
+    "description": "OK! So, you're going to love this...\nBasically... this is a banana... BUT! IT HAS LIMBS!!!!",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/6/67663/3915246-banana-joe.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Abnan",
+    "price": 666,
+    "description": "",
+    "image": "https://pbs.twimg.com/profile_images/678534926103261184/eolgbqpA.png"
+  },
+  {
+    "id": "3",
+    "title": "Obnonce",
+    "price": 138,
+    "description": "",
+    "image": "https://i.redd.it/ojk1dj55xk421.jpg"
+  }
+]

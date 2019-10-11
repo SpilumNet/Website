@@ -1,0 +1,7 @@
+{% block content %}
+<article class="post">
+    <img src="{{ object['image'] }}" alt="">
+    <p class="body">{{ object['body'] }}<br><br><em>{{ object['author']['email'] }}</em></p>
+</article>
+<hr>
+{% endblock %}
