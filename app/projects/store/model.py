@@ -28,7 +28,6 @@ class Customer(object):
 
 
 def get_products():
-    global APP_ROOT
     with open('./app/static/projects/store/products.json') as f:
         products_obj = json.loads(f.read())
 

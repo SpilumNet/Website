@@ -1,7 +1,9 @@
-from app import app
-from flask import render_template
 import os
 from datetime import datetime
+
+from flask import render_template
+
+from app import app
 
 
 @app.context_processor
@@ -48,3 +50,7 @@ app.register_blueprint(store.bp)
 from .projects.news import news
 
 app.register_blueprint(news.bp)
+
+from .projects.petrol import petrol
+
+app.register_blueprint(petrol.bp)
