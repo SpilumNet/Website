@@ -1,0 +1,19 @@
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <link href="{{ url_for('static', filename='projects/petrol/css/main.css') }}" rel="stylesheet">
+    <div class="company">
+        {% for key, value in company.items() %}
+            <h1>{{ key }}</h1>
+            {% for key2, value2 in value.items() %}
+                <h2>{{ key2 }}: {{ value2 }}</h2>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <hr>
+{% endblock %}
