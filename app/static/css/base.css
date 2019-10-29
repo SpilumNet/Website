@@ -43,8 +43,10 @@ footer {
     font-size: 1.3rem;
 }
 
-footer img {
-    max-height: 1.3rem;
+.license {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 /* Bootstrap Custom */
