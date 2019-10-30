@@ -1,4 +1,6 @@
+import importlib.util
 import os
+import sys
 from datetime import datetime
 
 from flask import render_template
@@ -39,18 +41,9 @@ def contact():
     return render_template('information/contact.html')
 
 
-from .projects.kennitala import kennitala
-
-app.register_blueprint(kennitala.bp)
-
-from .projects.store import store
-
-app.register_blueprint(store.bp)
-
-from .projects.news import news
-
-app.register_blueprint(news.bp)
-
-from .projects.petrol import petrol
-
-app.register_blueprint(petrol.bp)
+for project in os.listdir('./app/projects'):
+    spec = importlib.util.spec_from_file_location(project, 'app/projects/{}/{}.py'.format(project, project))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    sys.modules[project] = module
+    app.register_blueprint(module.bp)

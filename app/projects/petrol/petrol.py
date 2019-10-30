@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from . import model
+from app.projects.petrol import model
 
 bp = Blueprint('petrol', __name__)
 

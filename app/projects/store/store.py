@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, session, redirect, flash
 
-from . import model
+from app.projects.store import model
 
 bp = Blueprint('store', __name__)
 
