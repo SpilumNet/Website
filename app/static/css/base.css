@@ -146,3 +146,12 @@ a:hover div.bg-dark {
     padding: 0px 0px 0px 0px;
     outline: 0;
 }
+
+.dropdown-item {
+    color: rgb(197, 193, 185) !important;
+}
+
+.dropdown-item:hover {
+    background: rgb(12, 14, 16) !important;
+    color: rgba(255, 255, 255, 0.91) !important;
+}

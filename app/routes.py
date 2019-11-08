@@ -1,16 +1,10 @@
 import importlib.util
 import os
 import sys
-from datetime import datetime
 
 from flask import render_template
 
 from app import app
-
-
-@app.context_processor
-def inject_now():
-    return {'now': datetime.utcnow()}
 
 
 @app.errorhandler(404)
@@ -23,7 +17,7 @@ def index():
     project_list = []
     for project in os.listdir('./app/projects'):
         project_list.append(project)
-    return render_template('index.html', projects=project_list, now=datetime.utcnow())
+    return render_template('index.html', projects=project_list)
 
 
 @app.route('/about')
@@ -47,3 +41,10 @@ for project in os.listdir('./app/projects'):
     spec.loader.exec_module(module)
     sys.modules[project] = module
     app.register_blueprint(module.bp)
+
+for module in os.listdir('./app/modules'):
+    spec = importlib.util.spec_from_file_location(module, 'app/modules/{}/{}.py'.format(module, module))
+    moduler = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(moduler)
+    sys.modules[module] = moduler
+    app.register_blueprint(moduler.bp)

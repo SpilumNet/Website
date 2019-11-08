@@ -2,3 +2,4 @@ __pycache__
 venv
 .flaskenv
 .idea
+config.json

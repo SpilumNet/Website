@@ -11,6 +11,21 @@
             <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Blog</a></li>
             <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Projects</a></li>
             <li class="nav-item"><a href="https://github.com/SpilumNet/Website/tree/flask" class="nav-link" target="_blank">Github</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account
+                </a>
+                <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
+                    {% if session['username'] %}
+                        <a href="{{ url_for('account.profile') }}" class="dropdown-item">Profile</a>
+                        <a href="{{ url_for('account.logout') }}" class="dropdown-item">Logout</a>
+                    {% endif %}
+                    {% if not session['username'] %}
+                        <a href="{{ url_for('account.login') }}" class="dropdown-item">Login</a>
+                        <a href="{{ url_for('account.register') }}" class="dropdown-item">Register</a>
+                    {% endif %}
+                </div>
+            </li>
         </ul>
     </div>
 </nav>

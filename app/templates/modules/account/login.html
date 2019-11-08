@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="login">
+        <h1>Login</h1>
+        <div>
+            <a href="{{ url_for('account.login') }}">Login</a>
+            <a href="{{ url_for('account.register') }}">Register</a>
+        </div>
+        <form action="{{ url_for('account.login') }}" method="post">
+            <label for="username"></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password"></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="register">
+        <h1>Register</h1>
+        <div>
+            <a href="{{ url_for('account.login') }}">Login</a>
+            <a href="{{ url_for('account.register') }}">Register</a>
+        </div>
+        <form action="{{ url_for('account.register') }}" method="post" autocomplete="off">
+            <label for="username"></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password"></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock %}
