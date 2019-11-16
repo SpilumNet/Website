@@ -1,9 +1,5 @@
 {
   "sql": {
-    "host": "127.0.0.1",
-    "port": 3306,
-    "db": "test",
-    "user": "root",
-    "password": "password"
+    "uri": "postgres://username:password@hostname:5432/database"
   }
 }
