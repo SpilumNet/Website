@@ -1,3 +1,4 @@
+sqlalchemy
 flask
 gunicorn
-pymysql
+psycopg2

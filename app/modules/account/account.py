@@ -14,18 +14,18 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        db.cur.execute("SELECT * FROM users WHERE user = %s AND pass = %s", (username, password))
+        account = db.con.execute("SELECT * FROM users WHERE username = %s AND passwd = %s", (username, password))
 
-        account = db.cur.fetchone()
+        for a in account:
+            if a:
+                session['loggedin'] = True
+                session['id'] = a['id']
+                session['username'] = a['username']
+                session['email'] = a['email']
 
-        if account:
-            session['loggedin'] = True
-            session['id'] = account['id']
-            session['username'] = account['user']
-
-            return redirect(url_for('account.profile'))
-        else:
-            msg = 'Incorrect username/password!'
+                return redirect(url_for('account.profile'))
+            else:
+                msg = 'Incorrect username/password!'
     return render_template('modules/account/login.html', msg=msg)
 
 
@@ -34,6 +34,7 @@ def logout():
     session.pop('loggedin', None)
     session.pop('id', None)
     session.pop('username', None)
+    session.pop('email', None)
 
     return redirect(url_for('account.login'))
 
@@ -46,21 +47,21 @@ def register():
         password = request.form['password']
         email = request.form['email']
 
-        db.cur.execute('SELECT * FROM users WHERE user = %s', username)
-        account = db.cur.fetchone()
+        account = db.con.execute('SELECT * FROM users WHERE username = %s', username)
 
-        if account:
-            msg = 'Account already exists!'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'Invalid email address!'
-        elif not re.match(r'[A-Za-z0-9]', username):
-            msg = 'Username must only contain alphanumeric characters!'
-        elif not username or not password or not email:
-            msg = 'Please fill out the form!'
-        else:
-            db.cur.execute('INSERT INTO users (user, pass, email) VALUES (%s, %s, %s)', (username, password, email))
-            db.cur.connection.commit()
-            msg = 'You have successfully registered!'
+        for a in account:
+            if a:
+                msg = 'Account already exists!'
+            elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+                msg = 'Invalid email address!'
+            elif not re.match(r'[A-Za-z0-9]', username):
+                msg = 'Username must only contain alphanumeric characters!'
+            elif not username or not password or not email:
+                msg = 'Please fill out the form!'
+            else:
+                db.con.execute('INSERT INTO users (username, passwd, email) VALUES (%s, %s, %s)', (username, password, email))
+                db.con.connection.commit()
+                msg = 'You have successfully registered!'
 
     elif request.method == 'POST':
         msg = 'Please fill out the form!'
@@ -71,9 +72,6 @@ def register():
 @bp.route('/account/profile')
 def profile():
     if 'loggedin' in session:
-        db.cur.execute('SELECT * FROM users WHERE id = %s', [session['id']])
-        account = db.cur.fetchone()
-
-        return render_template('modules/account/profile.html', account=account)
+        return render_template('modules/account/profile.html', account=session)
 
     return redirect(url_for('account.login'))

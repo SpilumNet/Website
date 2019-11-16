@@ -1,5 +1,5 @@
 import os
-import pymysql
+import sqlalchemy as sql
 import json
 from flask import Flask
 
@@ -8,31 +8,26 @@ app.secret_key = os.urandom(24)
 
 
 class Database(object):
-    def __init__(self):
-        with open("config.json") as f:
-            conf = json.load(f)
-        host = conf['sql']['host']
-        user = conf['sql']['user']
-        password = conf['sql']['password']
-        db = conf['sql']['db']
-        port = conf['sql']['port']
+    with open("config.json") as f:
+        conf = json.load(f)
+        engine = sql.create_engine(conf['sql']['uri'])
 
-        self.con = pymysql.connect(
-            host=host,
-            user=user,
-            port=port,
-            password=password,
-            db=db,
-            cursorclass=pymysql.cursors.DictCursor
-        )
-        self.cur = self.con.cursor()
+    def __init__(self):
+        self.con = self.engine.connect()
+        print("DB initialized")
 
 
 db = Database()
-db.cur.execute('CREATE TABLE IF NOT EXISTS users ('
-               'id INT AUTO_INCREMENT PRIMARY KEY, '
-               'user VARCHAR(32) NOT NULL, '
-               'pass VARCHAR(64) NOT NULL, '
-               'email VARCHAR(64) NOT NULL)')
+
+if not db.con.dialect.has_table(db.con, 'users'):
+    db.con.execute('CREATE TABLE IF NOT EXISTS users ('
+                   'id SERIAL PRIMARY KEY, '
+                   'username VARCHAR(32) NOT NULL, '
+                   'passwd VARCHAR(64) NOT NULL, '
+                   'email VARCHAR(64) NOT NULL)')
+db.con.execute("INSERT INTO users(id, username, passwd, email)"
+               "SELECT 1, 'test', 'test', 'test@test.test'"
+               "WHERE NOT EXISTS ("
+               "SELECT * FROM users WHERE id=1)")
 
 from app import routes
