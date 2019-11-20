@@ -48,18 +48,21 @@ def register():
         email = request.form['email']
 
         account = db.con.execute('SELECT * FROM users WHERE username = %s', username)
-
+        acc = False
         for a in account:
+            acc = True
             if a:
                 msg = 'Account already exists!'
-            elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+
+        if not acc:
+            if not re.match(r'[^@]+@[^@]+\.[^@]+', email):
                 msg = 'Invalid email address!'
             elif not re.match(r'[A-Za-z0-9]', username):
                 msg = 'Username must only contain alphanumeric characters!'
             elif not username or not password or not email:
                 msg = 'Please fill out the form!'
             else:
-                db.con.execute('INSERT INTO users (username, passwd, email) VALUES (%s, %s, %s)', (username, password, email))
+                db.con.execute("INSERT INTO users(username, passwd, email) SELECT %s, %s, %s", (username, password, email))
                 db.con.connection.commit()
                 msg = 'You have successfully registered!'
 
