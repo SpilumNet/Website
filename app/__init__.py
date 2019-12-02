@@ -25,9 +25,22 @@ if not db.con.dialect.has_table(db.con, 'users'):
                    'username VARCHAR(32) NOT NULL, '
                    'passwd VARCHAR(64) NOT NULL, '
                    'email VARCHAR(64) NOT NULL)')
+
 db.con.execute("INSERT INTO users(username, passwd, email)"
                "SELECT 'test', 'test', 'test@test.test'"
                "WHERE NOT EXISTS ("
                "SELECT * FROM users WHERE id=1)")
+
+if not db.con.dialect.has_table(db.con, 'comments'):
+    db.con.execute('CREATE TABLE IF NOT EXISTS comments ('
+                   'id SERIAL PRIMARY KEY,'
+                   'username VARCHAR(32) NOT NULL,'
+                   'author VARCHAR(32) NOT NULL,'
+                   'message TEXT)')
+
+db.con.execute("INSERT INTO comments(username, author, message)"
+               "SELECT 'test', 'test1', 'This is a test message'"
+               "WHERE NOT EXISTS ("
+               "SELECT * FROM comments WHERE id=1)")
 
 from app import routes

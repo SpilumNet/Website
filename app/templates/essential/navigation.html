@@ -17,13 +17,14 @@
                 </a>
                 <div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
                     {% if session['username'] %}
-                        <a href="{{ url_for('account.profile') }}" class="dropdown-item">Profile</a>
+                        <a href="{{ url_for('account.profile', user=session['username']) }}" class="dropdown-item">Profile</a>
                         <a href="{{ url_for('account.logout') }}" class="dropdown-item">Logout</a>
                     {% endif %}
                     {% if not session['username'] %}
                         <a href="{{ url_for('account.login') }}" class="dropdown-item">Login</a>
                         <a href="{{ url_for('account.register') }}" class="dropdown-item">Register</a>
                     {% endif %}
+                    <a href="{{ url_for('account.list') }}" class="dropdown-item">Users</a>
                 </div>
             </li>
         </ul>

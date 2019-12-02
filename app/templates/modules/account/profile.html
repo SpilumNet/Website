@@ -1,18 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Profile Page</h2>
+<h2>Profile: {{ user }}</h2>
 <div>
-    <p>Your account details are below:</p>
+    <h4>Comments:</h4>
     <table>
         <tr>
-            <td>Username:</td>
-            <td>{{ account['username'] }}</td>
+            <td>Author</td>
+            <td>Comment</td>
         </tr>
-        <tr>
-            <td>Email:</td>
-            <td>{{ account['email'] }}</td>
-        </tr>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.author }}</td>
+                <td>{{ comment.message }}</td>
+                {% if session['username'] == user %}
+                    <td><a href="/comment/{{ comment.id }}/delete">delete</a></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
     </table>
+    <br>
+    <form action="{{ url_for('account.profile', user=user) }}" method="post">
+        {% if session['username'] %}
+            <textarea name="comment" cols="50" rows="3"></textarea>
+            <br>
+            <input type="submit" value="Post Comment">
+        {% endif %}
+    </form>
 </div>
 {% endblock %}
